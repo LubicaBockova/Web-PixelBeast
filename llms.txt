@@ -1,0 +1,12 @@
+# PixelBeast Studio
+
+PixelBeast je moderní softwarové studio zaměřené na vývoj iOS aplikací a webů, včetně návrhu designu.  
+Aplikace stavíme od základu – s důrazem na stabilitu, výkon a čisté řešení (Swift, tvOS).  
+Weby tvoříme na míru – rychlé, přehledné a technicky čisté (HTML, CSS, JS).  
+
+Struktura firmy a kontakty:
+Adresa: Nové sady 988/2, 602 00 Brno, Jihomoravský kraj
+Firma: PixelBeast s.r.o.
+IČO: 24408573
+Email: ahoj@pixelbeast.cz  
+Telefon: 775 203 143

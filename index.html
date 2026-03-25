@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelBeast - Aplikace a weby, které drží tempo s dnešní dobou</title>
+    <meta name="description"
+        content="Navrhujeme – a vyvíjíme digitální produkty podle moderních standardů – s důrazem na výkon, kvalitu a dlouhodobou udržitelnost. Spojujeme design a vývoj pod jednou střechou. 10 let zkušeností s vývojem z komerčních projektů.">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="PixelBeast - Design & Vývoj">
+    <meta property="og:description"
+        content="Aplikace a weby, které drží tempo s dnešní dobou. Spojujeme design a vývoj pod jednou střechou.">
+    <meta property="og:image" content="https://pixelbeast.cz/og-image.jpg">
+    <meta property="og:url" content="https://pixelbeast.cz">
+    <meta property="og:type" content="website">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pixelbeast.cz/">
+
+    <!-- Favicon (SVG) -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Preconnect pro fonty -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS a animace -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome pro ikony (free verze) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="#home">
+                    <img src="logo.png" alt="PixelBeast Logo">
+                </a>
+            </div>
+
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <nav id="main-nav" class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#home">Domů</a></li>
+                    <li><a href="#sluzby">Služby</a></li>
+                    <li><a href="#proc-my">Proč my</a></li>
+                </ul>
+                <div class="header-contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+420775203143" class="nowrap">775 203 143</a>
+                    <a href="#kontakt" class="btn btn-outline nav-btn">Kontakt</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Sekce -->
+        <section id="home" class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Aplikace a weby, <br>
+                        které drží <span class="highlight-wrap"><span class="highlight-text">tempo</span><span
+                                class="highlight-brush"></span></span> <br>
+                        s dnešní dobou.
+                    </h1>
+                    <p class="hero-desc">
+                        Rychlá realizace, moderní přístup a funkční výsledek.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#kontakt" class="btn btn-hero">Probrat projekt</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <!-- Tvar ořezu se simulovaným filtrem -->
+                    <div class="hero-image-mask">
+                        <img src="titulní foto.png" alt="Technologie a aplikace" loading="eager">
+                        <div class="hero-overlay-shape"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce Služby -->
+        <section id="sluzby" class="section bg-light">
+            <div class="container text-center">
+                <span class="section-subtitle text-primary">CO UMÍME</span>
+                <h2 class="section-title text-max mx-auto">Navrhujeme a vyvíjíme digitální produkty podle moderních
+                    standardů</h2>
+                <p class="section-desc text-max mx-auto mb-5">s důrazem na výkon, kvalitu a dlouhodobou udržitelnost.
+                </p>
+
+                <div class="services-grid">
+                    <!-- Karta Vývoj Aplikací -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-brands fa-apple"></i>
+                        </div>
+                        <h3>Vývoj aplikací</h3>
+                        <p class="service-intro">Aplikace stavíme od základu – s důrazem na stabilitu, výkon a čisté
+                            řešení.</p>
+                        <ul class="service-list text-left">
+                            <li><i class="fa-solid fa-check text-primary"></i> vývoj pro iOS (Swift) a tvOS</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> struktura a UX návrh</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> návrh architektury aplikací</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> clean code a škálovatelné řešení</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> optimalizace výkonu a plynulosti</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> integrace API a práce s daty</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> testování a ladění aplikací</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> publikace a správa v App Store</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> dlouhodobý rozvoj a údržba</li>
+                        </ul>
+                        <div class="service-footer mt-4 text-primary font-weight-bold">Aplikace navrhujeme tak, aby
+                            obstály nejen dnes, ale i při dalším rozvoji.</div>
+                    </div>
+
+                    <!-- Karta Weby -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3>Weby</h3>
+                        <p class="service-intro">Weby tvoříme na míru – rychlé, přehledné a technicky čisté.</p>
+                        <ul class="service-list text-left">
+                            <li><i class="fa-solid fa-check text-primary"></i> vývoj webů v HTML, CSS a JavaScriptu</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> moderní přístup</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> důraz na rychlost načítání a výkon</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> responzivní design (mobil, tablet,
+                                desktop)</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> SEO optimalizace a technické nastavení
+                            </li>
+                            <li><i class="fa-solid fa-check text-primary"></i> nastavení vyhledatelnosti (Google,
+                                Seznam)</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> struktura a UX návrh</li>
+                            <li><i class="fa-solid fa-check text-primary"></i> čistý kód</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce Proč my (Accordion) -->
+        <section id="proc-my" class="section pattern-bg">
+            <div class="container">
+                <div class="why-us-wrap">
+                    <div class="why-us-content">
+                        <span class="section-subtitle text-primary">PROČ MY</span>
+                        <h2 class="section-title">Proč si nás vybrat?</h2>
+                        <p>Pracujeme s péčí, kterou si zaslouží každý projekt. Nevíte, kde začít? Navrhneme řešení,
+                            které bude dávat smysl – technicky i obchodně.</p>
+                        <a href="#kontakt" class="btn mt-4">Probrat projekt</a>
+                    </div>
+                    <div class="why-us-accordion">
+                        <!-- Podmínka v zadání: 'pokud je jich víc než 3, tak je rozděl do dvou sloupců' viz CSS .accordion-grid -->
+                        <div class="accordion accordion-grid" id="accordion-container">
+                            <div class="accordion-item">
+                                <button class="accordion-header" aria-expanded="false">
+                                    <span class="accordion-title">Rychlost a přehlednost</span>
+                                    <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Každý web stavíme s důrazem na rychlost, přehlednost a reálné výsledky.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header" aria-expanded="false">
+                                    <span class="accordion-title">Osobní a pečlivý přístup</span>
+                                    <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Pracujeme s péčí, kterou si zaslouží každý projekt. Přímá komunikace bez
+                                        zbytečných mezičlánků.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header" aria-expanded="false">
+                                    <span class="accordion-title">Návrh řešení od A do Z</span>
+                                    <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Nevíte, kde začít? Navrhneme řešení, které bude dávat smysl – technicky i
+                                        obchodně.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header" aria-expanded="false">
+                                    <span class="accordion-title">10 let zkušeností</span>
+                                    <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Máme deset let zkušeností s vývojem z komerčních projektů. Důraz na kvalitu, ne
+                                        kvantitu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt Sekce (Formspree Honeypot) -->
+        <section id="kontakt" class="section bg-light">
+            <div class="container contact-wrap">
+                <div class="contact-info">
+                    <span class="section-subtitle text-primary">KONTAKT</span>
+                    <h2 class="section-title">Spojte se s námi</h2>
+                    <p>Máte projekt, o kterém se chcete pobavit? Napište nám a my se vám co nejdříve ozveme.</p>
+                </div>
+                <div class="contact-form-wrap">
+                    <form id="contactForm" action="https://formspree.io/f/mwvwezrw" method="POST" class="contact-form">
+                        <!-- Honeypot -->
+                        <label style="display:none">Nepolapitelné políčko (honeypot): <input type="text"
+                                name="_gotcha"></label>
+
+                        <div class="form-group">
+                            <label for="name">Jméno</label>
+                            <input type="text" id="name" name="name" required placeholder="Vaše jméno">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="vas@email.cz">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Zpráva</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Napište nám o vašem projektu..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Odeslat zprávu</button>
+                        <p id="form-status" style="margin-top: 1rem; font-weight: 500; display: none; text-align: center; border-radius: 4px; padding: 0.5rem;"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer pattern-bg">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="logo.png" alt="PixelBeast Logo">
+                </div>
+                <p style="margin-top: 1.8rem; line-height: 1.7;">Aplikace a weby, které drží tempo s dnešní dobou.
+                    <br>Spojujeme design a vývoj pod jednou střechou.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontakt</h3>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-envelope text-primary"></i> <a
+                            href="mailto:info@pixelbeast.cz">info@pixelbeast.cz</a></li>
+                    <li><i class="fa-solid fa-phone text-primary"></i> <a href="tel:+420775203143" class="nowrap">775
+                            203 143</a></li>
+                    <li><i class="fa-solid fa-location-dot text-primary"></i> Nové sady 988/2,<br>602 00
+                        Brno,<br>Jihomoravský kraj</li>
+                </ul>
+            </div>
+            <div class="footer-company">
+                <h3>Fakturační údaje</h3>
+                <ul class="contact-list">
+                    <li><strong>PixelBeast s.r.o.</strong></li>
+                    <li>IČO: 244 08 573</li>
+                    <li>Společnost je zapsaná v obchodním rejstříku.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center"
+                style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                <p>&copy; 2026 PixelBeast s.r.o. Všechna práva vyhrazena.</p>
+                <a href="zasady-ochrany-osobnich-udaju.html"
+                    style="font-size: 0.85rem; text-decoration: underline; color: #a0aec0; transition: color 0.2s;">Zásady
+                    ochrany osobních údajů</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Lišta -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Tento web používá soubory cookies k zajištění co nejlepšího zážitku. Pokračováním v prohlížení souhlasíte
+                s jejich použitím.</p>
+            <button id="accept-cookies" class="btn btn-cookies">Rozumím</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
