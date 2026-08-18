@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku - Classic Logic Puzzle Game</title>
+    <meta name="description"
+        content="Sudoku - A captivating puzzle game for all ages. Play free on iOS and iPadOS. Developed by PixelBeast.">
+    <meta property="og:title" content="Sudoku - Classic Logic Puzzle Game">
+    <meta property="og:description"
+        content="Sudoku - A captivating puzzle game for all ages. Play free on iOS and iPadOS.">
+    <meta property="og:image" content="https://pixelbeast.cz/apps/sudoku/og-image.jpg">
+    <meta property="og:url" content="https://pixelbeast.cz/apps/sudoku/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://pixelbeast.cz/apps/sudoku/">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .app-hero {
+            min-height: 35vh;
+            padding: 3rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            margin-top: 100px;
+        }
+
+        .app-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .app-hero p {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #cbd5e1;
+        }
+
+        .app-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .app-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary);
+            color: var(--bg-dark);
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            transition: all var(--transition-base);
+            position: relative;
+            z-index: 1;
+        }
+
+        .app-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: width var(--transition-base);
+            z-index: -1;
+            border-radius: 4px;
+        }
+
+        .app-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-dark);
+            color: var(--bg-dark);
+        }
+
+        .app-btn:hover::before {
+            width: 100%;
+        }
+
+        .app-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .app-section {
+            margin-bottom: 3rem;
+        }
+
+        .app-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .app-section p {
+            color: #cbd5e1;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 231, 161, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(0, 231, 161, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 231, 161, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .feature-card p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-links a {
+            display: inline-block;
+            margin: 0.5rem 1rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-base);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-light);
+        }
+
+        @media (max-width: 992px) {
+            .app-hero {
+                min-height: auto;
+                padding: 4rem 1.5rem;
+                margin-top: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="../../index.html">
+                    <img src="../../logo.png" alt="PixelBeast Logo">
+                </a>
+            </div>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="main-nav" class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html#sluzby">Services</a></li>
+                    <li><a href="../../index.html#proc-my">About</a></li>
+                    <li><a href="../index.html">Apps</a></li>
+                </ul>
+                <div class="header-contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+420775203143" class="nowrap">+420 775 203 143</a>
+                    <a href="../../index.html#kontakt" class="btn btn-outline nav-btn">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="app-hero">
+            <div class="container">
+                <h1>Sudoku</h1>
+                <p>A classic logic puzzle that will keep you entertained for hours. Free on iOS and iPadOS.</p>
+                <div class="app-actions">
+                    <a href="https://apps.apple.com" class="app-btn" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-apple"></i> App Store
+                    </a>
+                    <a href="https://play.google.com/store" class="app-btn" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-google-play"></i> Google Play
+                    </a>
+                    <a href="privacy-policy.html" class="app-btn" style="background: rgba(255,255,255,0.2); border: 2px solid white; color: white;">
+                        <i class="fa-solid fa-shield"></i> Privacy
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="app-content">
+            <div class="app-section">
+                <h2><i class="fa-solid fa-star"></i> Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-square"></i></div>
+                        <h3>4x4, 6x6 & 9x9 Grids</h3>
+                        <p>Choose from multiple grid sizes to suit your preference and skill level.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-palette"></i></div>
+                        <h3>Multiple Input Types</h3>
+                        <p>Play with numbers, colors, or animal images. Customize your puzzle experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-star"></i></div>
+                        <h3>Three Difficulty Levels</h3>
+                        <p>Easy, Normal, and Hard modes. Challenge yourself with the difficulty that's right for you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-section">
+                <h2>About the App</h2>
+                <p>Sudoku is a classic logic puzzle that tests your reasoning and problem-solving skills. The app was developed by PixelBeast with a focus on clean and intuitive design.</p>
+                <p>Whether you're a beginner or an experienced player, Sudoku offers an interactive and engaging experience that will entertain you while exercising your mind.</p>
+            </div>
+
+            <div class="app-section">
+                <h2>Support & Feedback</h2>
+                <p>If you have any questions, bugs to report, or suggestions, we'd love to hear from you. Your feedback helps us improve the app.</p>
+                <p>Email: <a href="mailto:info@pixelbeast.cz">info@pixelbeast.cz</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer pattern-bg">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="../../logo.png" alt="PixelBeast Logo">
+                </div>
+                <p style="margin-top: 1.8rem; line-height: 1.7;">Aplikace a weby, které drží tempo s dnešní dobou.
+                    <br>Spojujeme design a vývoj pod jednou střechou.
+                </p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-envelope text-primary"></i> <a
+                            href="mailto:info@pixelbeast.cz">info@pixelbeast.cz</a></li>
+                    <li><i class="fa-solid fa-phone text-primary"></i> <a href="tel:+420775203143" class="nowrap">+420 775 203 143</a></li>
+                    <li><i class="fa-solid fa-location-dot text-primary"></i> Nové sady 988/2,<br>602 00
+                        Brno,<br>Czech Republic</li>
+                </ul>
+            </div>
+            <div class="footer-company">
+                <h3>Company Info</h3>
+                <ul class="contact-list">
+                    <li><strong>PixelBeast s.r.o.</strong></li>
+                    <li>ID: 244 08 573</li>
+                    <li>Registered in the Commercial Register.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center"
+                style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                <p>&copy; 2026 PixelBeast s.r.o. All rights reserved.</p>
+                <a href="../../zasady-ochrany-osobnich-udaju.html"
+                    style="font-size: 0.85rem; text-decoration: underline; color: #a0aec0; transition: color 0.2s;">Privacy
+                    Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+
+</body>
+
+</html>
